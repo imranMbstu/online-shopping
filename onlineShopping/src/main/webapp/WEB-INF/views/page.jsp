@@ -24,6 +24,9 @@
 	
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.css" rel="stylesheet">
+    
+    <!-- Bootstrap slate theme CSS https://bootswatch.com/3/ -->
+    <link href="${css}/bootstrap-slate-theme.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -31,33 +34,35 @@
 </head>
 
 <body>
-
-	<!-- Navigation -->
-    <%@include file="./shared/navbar.jsp" %>
-
-    
-    <!-- Page Content -->
-    <c:if test="${userClickHome == true}">
-    	<%@include file="home.jsp"%>
-    </c:if>
-    
-    <c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
-	
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
-	
-    <!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
-	
-   <!-- JavaScript -->
-    <script src="${js}/jquery.js"></script>
-    <script src="${js}/bootstrap.js"></script>
-    
-	<!-- Custom Js -->
-    <script src="${js}/myapp.js"></script>
+	<div class="wrapper">
+		<!-- Navigation -->
+	    <%@include file="./shared/navbar.jsp" %>
+	    
+	    <!-- Page Content -->
+	    <div class="content">
+		    <c:if test="${userClickHome == true}">
+		    	<%@include file="home.jsp"%>
+		    </c:if>
+		    
+		    <c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
+			
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+		</div>
+		
+	    <!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+		
+	   <!-- JavaScript -->
+	    <script src="${js}/jquery.js"></script>
+	    <script src="${js}/bootstrap.js"></script>
+	    
+		<!-- Custom Js -->
+	    <script src="${js}/myapp.js"></script>
+    </div>
 </body>
 
 </html>
