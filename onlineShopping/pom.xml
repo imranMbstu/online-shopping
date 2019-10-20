@@ -15,6 +15,7 @@
 	</properties>
 
 	<dependencies>
+	
 		<!-- JAVA EE API -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -22,6 +23,7 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<!-- JUNIT -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -30,11 +32,18 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Spring -->
+		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- JSTL -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 
 	</dependencies>
